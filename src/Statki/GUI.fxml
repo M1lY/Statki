@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="500.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statki.Controller">
+    <stylesheets>
+        <URL value="@style" />
+    </stylesheets>
+    <children>
+        <HBox alignment="CENTER" prefHeight="250.0">
+            <children>
+                <GridPane id="gridStyle" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="253.0" prefWidth="319.0" style="-fx-background-color: #497496;" styleClass="bordery">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="29.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <Region prefHeight="200.0" prefWidth="200.0" styleClass="bordery" />
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="A" GridPane.rowIndex="1" />
+                        <Label layoutX="11.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="B" GridPane.rowIndex="2" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="C" GridPane.rowIndex="3" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="D" GridPane.rowIndex="4" />
+                        <Label layoutX="11.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="E" GridPane.rowIndex="5" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="F" GridPane.rowIndex="6" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="G" GridPane.rowIndex="7" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="H" GridPane.rowIndex="8" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="I" GridPane.rowIndex="9" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="J" GridPane.rowIndex="10" />
+                        <Label layoutX="11.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="1" GridPane.columnIndex="1" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="2" GridPane.columnIndex="2" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="3" GridPane.columnIndex="3" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="4" GridPane.columnIndex="4" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="5" GridPane.columnIndex="5" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="6" GridPane.columnIndex="6" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="7" GridPane.columnIndex="7" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="8" GridPane.columnIndex="8" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="9" GridPane.columnIndex="9" />
+                        <Label layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text="10" GridPane.columnIndex="10" />
+
+
+                        <JFXButton fx:id="A1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" style="-jfx-disable-visual-focus: true;" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="A10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="1" />
+
+                        <JFXButton fx:id="B1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="B10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="2" />
+
+                        <JFXButton fx:id="C1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="C10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="3" />
+
+                        <JFXButton fx:id="D1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="D10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="4" />
+
+                        <JFXButton fx:id="E1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="E10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="5" />
+
+                        <JFXButton fx:id="F1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="F10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="6" />
+
+                        <JFXButton fx:id="G1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="G10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="7" />
+
+                        <JFXButton fx:id="H1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="H10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="8" />
+
+                        <JFXButton fx:id="I1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="I10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="9" />
+
+                        <JFXButton fx:id="J1" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J2" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J3" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J4" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J5" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J6" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J7" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J8" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="8" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J9" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="9" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="J10" layoutX="295.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#btnSet" onMouseEntered="#btnHover" onMouseExited="#btnExit" prefHeight="23.0" prefWidth="29.0" styleClass="bordery" text=" " GridPane.columnIndex="10" GridPane.rowIndex="10" />
+
+
+                    </children>
+                </GridPane>
+                <Region prefHeight="200.0" prefWidth="200.0" />
+                <GridPane id="gridStyleD" alignment="CENTER_RIGHT" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="315.0" style="-fx-background-color: #497496; -fx-border-style: solid; -fx-border-color: #505050;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="27.0" text="A" GridPane.rowIndex="1" />
+                        <Label layoutX="11.0" layoutY="32.0" prefHeight="32.0" prefWidth="27.0" text="B" GridPane.rowIndex="2" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="C" GridPane.rowIndex="3" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="D" GridPane.rowIndex="4" />
+                        <Label layoutX="11.0" layoutY="32.0" prefHeight="32.0" prefWidth="27.0" text="E" GridPane.rowIndex="5" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="F" GridPane.rowIndex="6" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="G" GridPane.rowIndex="7" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="H" GridPane.rowIndex="8" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="I" GridPane.rowIndex="9" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="J" GridPane.rowIndex="10" />
+                        <Label layoutX="11.0" layoutY="32.0" prefHeight="32.0" prefWidth="27.0" text="1" GridPane.columnIndex="1" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="57.0" text="2" GridPane.columnIndex="2" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="3" GridPane.columnIndex="3" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="4" GridPane.columnIndex="4" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="5" GridPane.columnIndex="5" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="6" GridPane.columnIndex="6" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="7" GridPane.columnIndex="7" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="8" GridPane.columnIndex="8" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="32.0" prefWidth="27.0" text="9" GridPane.columnIndex="9" />
+                        <Label layoutX="11.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text="10" GridPane.columnIndex="10" />
+
+
+                        <JFXButton fx:id="dA1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" />
+                        <JFXButton fx:id="dA2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="dA10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="1" />
+
+                        <JFXButton fx:id="dB1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="dB10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="2" />
+
+                        <JFXButton fx:id="dC1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                        <JFXButton fx:id="dC10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="3" />
+
+                        <JFXButton fx:id="dD1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="dD10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="4" />
+
+                        <JFXButton fx:id="dE1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                        <JFXButton fx:id="dE10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="5" />
+
+                        <JFXButton fx:id="dF1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="dF10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="6" />
+
+                        <JFXButton fx:id="dG1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="dG10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="7" />
+
+                        <JFXButton fx:id="dH1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="8" />
+                        <JFXButton fx:id="dH10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="8" />
+
+                        <JFXButton fx:id="dI1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                        <JFXButton fx:id="dI10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="9" />
+
+                        <JFXButton fx:id="dJ1" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ2" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ3" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ4" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ5" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ6" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ7" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ8" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="8" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ9" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="9" GridPane.rowIndex="10" />
+                        <JFXButton fx:id="dJ10" layoutX="295.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" text=" " GridPane.columnIndex="10" GridPane.rowIndex="10" />
+                    </children>
+                </GridPane>
+            </children>
+        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <VBox prefHeight="200.0" style="-fx-padding: 0;">
+                    <children>
+                        <HBox prefHeight="60.0">
+                            <children>
+                                <Button fx:id="V" mnemonicParsing="false" onAction="#switchingDirection" prefWidth="95.0" style="-fx-padding: 0; -fx-background-color: transparent;">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="10.0" />
+                                    </HBox.margin>
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@D.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="H" mnemonicParsing="false" onAction="#switchingDirection" prefWidth="95.0" style="-fx-padding: 0; -fx-background-color: transparent;">
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="10.0" />
+                                    </HBox.margin>
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@R.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Button fx:id="m1" mnemonicParsing="false" onAction="#mClick" prefHeight="25.0" prefWidth="200.0" text="Jendomasztowce (pozostało: 4)">
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="m2" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#mClick" prefHeight="25.0" prefWidth="200.0" text="Dwumasztowce (pozostało: 3)">
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="m3" layoutX="10.0" layoutY="55.0" mnemonicParsing="false" onAction="#mClick" prefWidth="200.0" text="Trzymasztowce (pozostało: 2)">
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="m4" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#mClick" prefWidth="200.0" text="Czteromasztowce (pozostało: 1)">
+                            <VBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <Region prefHeight="200.0" prefWidth="255.0" />
+                <Button mnemonicParsing="false" onAction="#sTurn" prefHeight="25.0" prefWidth="200.0" text="Oddaj turę przeciwnikowi">
+                    <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+        <Text fx:id="tError" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="655.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" top="6.0" />
+            </VBox.margin>
+        </Text>
+    </children>
+</VBox>

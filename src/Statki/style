@@ -1,0 +1,11 @@
+ #gridStyle > .label {
+    -fx-alignment: center;
+ }
+ #gridStyleD > .label {
+    -fx-alignment: center;
+ }
+ .bordery {
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: #34495A;
+ }
