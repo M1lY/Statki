@@ -44,6 +44,7 @@ public class Controller {
     int wSs = 0;
     int player=1;
     SaveData data = new SaveData();
+    SavePlayer savePlayer = new SavePlayer();
 
 
     public void btnHover(MouseEvent mouseEvent){
@@ -490,6 +491,9 @@ public class Controller {
         window.show();
         root.requestFocus();
 
+        SavePlayer savePlayer = (SavePlayer) ResourceManager.load("player");
+        player = savePlayer.player;
+        System.out.println("player: "+player);
         if(player==1) player=2;
         else if(player==2) player=1;
 
@@ -499,18 +503,20 @@ public class Controller {
     public void save(String sId){
         aId[wSs] = sId;
         String id = aId[wSs];
-        System.out.println(id);
+        //System.out.println(id);
         wSs++;
     }
 
     public void saveFile(){
         data.sId = aId;
+        savePlayer.player = player;
         try {
             if(player==1){
-                ResourceManager.save(data.sId,"1.save");
+                ResourceManager.save(data,"1.save");
             }else if(player==2){
-                ResourceManager.save(data.sId,"2.save");
+                ResourceManager.save(data,"2.save");
             }
+            ResourceManager.save(savePlayer,"player");
         } catch (Exception e) {
             System.out.println("Couldn't save: " + e.getMessage());
         }
@@ -529,10 +535,10 @@ public class Controller {
         catch (Exception e) {
             System.out.println("Couldn't load save data: " + e.getMessage());
         }
-        System.out.println("player: "+player);
+        System.out.println("playerL: "+player);
         for(int i=0; i<=19; i++){
             String id = aId[i];
-            System.out.println("id: "+id);
+            ///System.out.println("id: "+id);
             if(aId[i]!=null) {
                 JFXButton button = (JFXButton) root.lookup("#" + id);
                 button.setStyle("-fx-background-color: black");
