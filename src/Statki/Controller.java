@@ -538,7 +538,7 @@ public class Controller {
         System.out.println("playerL: "+player);
         for(int i=0; i<=19; i++){
             String id = aId[i];
-            ///System.out.println("id: "+id);
+            System.out.println("id: "+id);
             if(aId[i]!=null) {
                 JFXButton button = (JFXButton) root.lookup("#" + id);
                 button.setStyle("-fx-background-color: black");
