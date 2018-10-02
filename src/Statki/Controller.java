@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.sun.javaws.ui.SplashScreen.hide;
-
 public class Controller {
     public Text tError;
     String[] tab = new String[20];
