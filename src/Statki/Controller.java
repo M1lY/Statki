@@ -2,21 +2,19 @@ package Statki;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import javafx.stage.Window;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 public class Controller {
+    ConnectionParams params=new ConnectionParams();
+    private boolean isHost;
     public Text tError;
     String[] tab = new String[20];
     char[] alphabet = "ABCDEFGHIJ".toCharArray();
@@ -36,14 +34,9 @@ public class Controller {
     //public JFXButton sTurn;
     int wS = 0;
     Main main = new Main();
-    ControllerBTS controllerBTS = new ControllerBTS();
-    sr sr = new sr();
     String[] aId = new String[20];
     int wSs = 0;
     int player=1;
-    SaveData data = new SaveData();
-    SavePlayer savePlayer = new SavePlayer();
-
 
     public void btnHover(MouseEvent mouseEvent){
         switch (iM){
@@ -223,7 +216,6 @@ public class Controller {
             case 1:
                 if(i1>0 && validator(event, 1, 10, 10)) {
                     doSet(event, 1, 10, 10);
-                    arraySet(4);
                     i1--;
                     m1.setText("Jendomasztowce (pozostało: " + i1 + ")");
                 }else if(i1<=0){
@@ -235,7 +227,6 @@ public class Controller {
             case 2:
                 if(i2>0 && validator(event, 2, 8, 9)){
                     doSet(event, 2, 8, 9);
-                    arraySet(3);
                     i2--;
                     m2.setText("Dwumasztowce (pozostało: " + i2 + ")");
                 }else if(i2<=0){
@@ -247,7 +238,6 @@ public class Controller {
             case 3:
                 if(i3>0 && validator(event, 3, 7, 8)) {
                     doSet(event, 3, 7, 8);
-                    arraySet(2);
                     i3--;
                     m3.setText("Trzymasztowce (pozostało: " + i3 + ")");
                 }else if(i3<=0){
@@ -259,7 +249,6 @@ public class Controller {
             case 4:
                 if(i4>0 && validator(event, 4, 6, 7)) {
                     doSet(event, 4, 6, 7);
-                    arraySet(1);
                     i4--;
                     m4.setText("Czteromasztowce (pozostało: " + i4 + ")");
                 }else if(i4<=0){
@@ -446,56 +435,9 @@ public class Controller {
         return false;
     }
 
-    public void arraySet(int i){
-        switch (i){
-            case 4:
-
-                break;
-            case 3:
-
-                break;
-            case 2:
-
-                break;
-            case 1:
-
-                break;
-        }
-    }
-
     public void sTurn(ActionEvent event){
 
-        ((Node)event.getSource()).getScene().getWindow().hide();
 
-        saveFile();
-
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("BTS.fxml"));
-            Scene BTS_scene = new Scene(root);
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(BTS_scene);
-            window.show();
-            root.requestFocus();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickAW(MouseEvent mouseEvent) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
-        Scene BTS_scene = new Scene(root);
-        Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        window.setScene(BTS_scene);
-        window.show();
-        root.requestFocus();
-
-        SavePlayer savePlayer = (SavePlayer) ResourceManager.load("player");
-        player = savePlayer.player;
-        System.out.println("player: "+player);
-        if(player==1) player=2;
-        else if(player==2) player=1;
-
-        loadFile(root);
     }
 
     public void save(String sId){
@@ -503,45 +445,6 @@ public class Controller {
         String id = aId[wSs];
         //System.out.println(id);
         wSs++;
-    }
-
-    public void saveFile(){
-        data.sId = aId;
-        savePlayer.player = player;
-        try {
-            if(player==1){
-                ResourceManager.save(data,"1.save");
-            }else if(player==2){
-                ResourceManager.save(data,"2.save");
-            }
-            ResourceManager.save(savePlayer,"player");
-        } catch (Exception e) {
-            System.out.println("Couldn't save: " + e.getMessage());
-        }
-    }
-
-    public void loadFile(Parent root){
-        try {
-            if (player == 1) {
-                SaveData data = (SaveData) ResourceManager.load("1.save");
-                aId = data.sId;
-            } else if (player == 2) {
-                SaveData data = (SaveData) ResourceManager.load("2.save");
-                aId = data.sId;
-            }
-        }
-        catch (Exception e) {
-            System.out.println("Couldn't load save data: " + e.getMessage());
-        }
-        System.out.println("playerL: "+player);
-        for(int i=0; i<=19; i++){
-            String id = aId[i];
-            System.out.println("id: "+id);
-            if(aId[i]!=null) {
-                JFXButton button = (JFXButton) root.lookup("#" + id);
-                button.setStyle("-fx-background-color: black");
-            }
-        }
     }
 
 }
