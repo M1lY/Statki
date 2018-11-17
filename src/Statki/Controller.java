@@ -302,6 +302,8 @@ public class Controller {
                     setBlack(event, id);
                     stopH++;
                     tab[wS] = String.valueOf(letter+""+stopH);
+                    System.out.println("do set "+letter);
+                    System.out.println("do set "+stopH);
                     wS++;
                 }
             }else{
@@ -311,6 +313,8 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     tab[wS] = String.valueOf(letter+""+number);
+                    System.out.println("do set "+letter);
+                    System.out.println("do set "+number);
                     number++;
                     wS++;
                 }
@@ -320,6 +324,7 @@ public class Controller {
 
     private void setError(String s){
         tError.setText(s);
+        tError.setOpacity(1);
         FadeTransition ft = new FadeTransition(Duration.millis(3000), tError);
         ft.setFromValue(1.0);
         ft.setToValue(0);
@@ -409,14 +414,18 @@ public class Controller {
             if(number > stopH){
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
-                    stopH++;
+                    System.out.println("valid number>stopH letter:"+letter);
+                    System.out.println("valid number>stopH stopH:"+stopH);
                     if (valP(letter, stopH, list)){
                         return false;
                     }
+                    stopH++;
                 }
             }else{
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
+                    System.out.println("valid number<=stopH letter:"+letter);
+                    System.out.println("valid number<=stopH number:"+number);
                     if (valP(letter, number, list)){
                         return false;
                     }
@@ -438,6 +447,7 @@ public class Controller {
 
     private void save(String sId){
         aId[wSs] = sId;
+        System.out.println(sId);
         wSs++;
     }
 
