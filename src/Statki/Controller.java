@@ -1,6 +1,7 @@
 package Statki;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,42 +9,41 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class Controller {
     public Text tError;
-    String[] tab = new String[20];
-    char[] alphabet = "ABCDEFGHIJ".toCharArray();
-    int i1 = 4;
-    int i2 = 3;
-    int i3 = 2;
-    int i4 = 1;
-    int letter;
-    int number;
-    int letterM;
-    int iM = 1;
-    char direction = 'V';
+    private String[] tab = new String[20];
+    private char[] alphabet = "ABCDEFGHIJ".toCharArray();
+    private int i1 = 4;
+    private int i2 = 3;
+    private int i3 = 2;
+    private int i4 = 1;
+    private int letter;
+    private int number;
+    private int letterM;
+    private int iM = 1;
+    private char direction = 'V';
     public Button m1;
     public Button m2;
     public Button m3;
     public Button m4;
-    //public JFXButton sTurn;
-    int wS = 0;
-    Main main = new Main();
-    ControllerBTS controllerBTS = new ControllerBTS();
-    sr sr = new sr();
-    String[] aId = new String[20];
-    int wSs = 0;
-    int player=1;
-    SaveData data = new SaveData();
-    SavePlayer savePlayer = new SavePlayer();
-
+    private int wS = 0;
+    private String[] aId = new String[20];
+    private int wSs = 0;
+    private static int player = 1;
+    private Saver saver = new Saver();
+    private static boolean block1=false;
+    private static boolean block2=false;
 
     public void btnHover(MouseEvent mouseEvent){
         switch (iM){
@@ -76,7 +76,7 @@ public class Controller {
         }
     }
 
-    public void doHover(MouseEvent mouseEvent, int x, int stopV, int stopH) {
+    private void doHover(MouseEvent mouseEvent, int x, int stopV, int stopH) {
         JFXButton btn = (JFXButton) mouseEvent.getSource();
         splitIdChar(btn.getId());
         if (direction == 'V'){
@@ -88,7 +88,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: grey");
                     }
                     stopV++;
@@ -101,7 +101,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: grey");
                     }
                     letterM++;
@@ -116,7 +116,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: grey");
                     }
                     stopH++;
@@ -129,7 +129,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: grey");
                     }
                     number++;
@@ -155,7 +155,7 @@ public class Controller {
         }
     }
 
-    public void doExit(MouseEvent mouseEvent, int x , int stopV, int stopH){
+    private void doExit(MouseEvent mouseEvent, int x, int stopV, int stopH){
         JFXButton btn = (JFXButton) mouseEvent.getSource();
         splitIdChar(btn.getId());
         if(direction == 'V'){
@@ -167,7 +167,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: #497496");
                     }
 
@@ -181,7 +181,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: #497496");
                     }
                     letterM++;
@@ -196,7 +196,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: #497496");
                     }
                     stopH++;
@@ -209,7 +209,7 @@ public class Controller {
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
                     JFXButton button = (JFXButton) root.lookup("#" + id);
-                    if(button.getStyle() !="-fx-background-color: black"){
+                    if(!button.getStyle().equals("-fx-background-color: black")){
                         button.setStyle("-fx-background-color: #497496");
                     }
                     number++;
@@ -223,7 +223,6 @@ public class Controller {
             case 1:
                 if(i1>0 && validator(event, 1, 10, 10)) {
                     doSet(event, 1, 10, 10);
-                    arraySet(4);
                     i1--;
                     m1.setText("Jendomasztowce (pozostało: " + i1 + ")");
                 }else if(i1<=0){
@@ -235,7 +234,6 @@ public class Controller {
             case 2:
                 if(i2>0 && validator(event, 2, 8, 9)){
                     doSet(event, 2, 8, 9);
-                    arraySet(3);
                     i2--;
                     m2.setText("Dwumasztowce (pozostało: " + i2 + ")");
                 }else if(i2<=0){
@@ -247,7 +245,6 @@ public class Controller {
             case 3:
                 if(i3>0 && validator(event, 3, 7, 8)) {
                     doSet(event, 3, 7, 8);
-                    arraySet(2);
                     i3--;
                     m3.setText("Trzymasztowce (pozostało: " + i3 + ")");
                 }else if(i3<=0){
@@ -259,7 +256,6 @@ public class Controller {
             case 4:
                 if(i4>0 && validator(event, 4, 6, 7)) {
                     doSet(event, 4, 6, 7);
-                    arraySet(1);
                     i4--;
                     m4.setText("Czteromasztowce (pozostało: " + i4 + ")");
                 }else if(i4<=0){
@@ -271,26 +267,7 @@ public class Controller {
         }
     }
 
-    private void setError(String s){
-        tError.setText(s);
-        new Thread(() -> {
-            try {
-                Thread.sleep(1500);
-                tError.setOpacity(0.75);
-                Thread.sleep(100);
-                tError.setOpacity(0.50);
-                Thread.sleep(100);
-                tError.setOpacity(0.25);
-                Thread.sleep(100);
-                tError.setText("");
-                tError.setOpacity(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
-    }
-
-    public void doSet(MouseEvent event, int x, int stopV, int stopH){
+    private void doSet(MouseEvent event, int x, int stopV, int stopH){
         JFXButton btn = (JFXButton) event.getSource();
         String bId = btn.getId();
         splitIdChar(bId);
@@ -324,7 +301,6 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     stopH++;
-                    System.out.println(letter+""+stopH);
                     tab[wS] = String.valueOf(letter+""+stopH);
                     wS++;
                 }
@@ -342,7 +318,22 @@ public class Controller {
         }
     }
 
-    public void setBlack(MouseEvent event, String id){
+    private void setError(String s){
+        tError.setText(s);
+        FadeTransition ft = new FadeTransition(Duration.millis(3000), tError);
+        ft.setFromValue(1.0);
+        ft.setToValue(0);
+        new Thread(() -> {
+            try {
+                Thread.sleep(4000);
+                ft.play();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+
+    private void setBlack(MouseEvent event, String id){
         Node source = (Node) event.getSource();
         Window theStage = source.getScene().getWindow();
         Scene root = theStage.getScene();
@@ -350,7 +341,7 @@ public class Controller {
         button.setStyle("-fx-background-color: black");
     }
 
-    public void splitIdChar(String Id){
+    private void splitIdChar(String Id){
         char a = Id.charAt(0);
         for (int i=0; i<10; i++){
             if(alphabet[i] == a){
@@ -360,7 +351,6 @@ public class Controller {
             }
         }
         number = Integer.parseInt(Id.substring(1));
-        return;
     }
 
     public void mClick(ActionEvent event){
@@ -393,7 +383,7 @@ public class Controller {
         }
     }
 
-    public boolean validator(MouseEvent event, int x, int stopV, int stopH){
+    private boolean validator(MouseEvent event, int x, int stopV, int stopH){
         JFXButton btn = (JFXButton) event.getSource();
         String bId = btn.getId();
         splitIdChar(bId);
@@ -437,7 +427,7 @@ public class Controller {
         return true;
     }
 
-    public boolean valP(int a, int b, List<String> list){
+    private boolean valP(int a, int b, List<String> list){
         for (int p=0; p<19; p++){
             if (list.contains(String.valueOf(a+""+b)) || list.contains(String.valueOf(a+""+(b+1))) || list.contains(String.valueOf(a+""+(b-1))) || list.contains(String.valueOf((a+1) +""+ b)) || list.contains(String.valueOf((a+1) +""+ (b+1))) || list.contains(String.valueOf((a+1) +""+ (b-1))) || list.contains(String.valueOf((a-1) +""+ b)) || list.contains(String.valueOf((a-1) +""+ (b+1))) || list.contains(String.valueOf((a-1) +""+ (b-1)))){
                 return true;
@@ -446,29 +436,37 @@ public class Controller {
         return false;
     }
 
-    public void arraySet(int i){
-        switch (i){
-            case 4:
-
-                break;
-            case 3:
-
-                break;
-            case 2:
-
-                break;
-            case 1:
-
-                break;
-        }
+    private void save(String sId){
+        aId[wSs] = sId;
+        wSs++;
     }
 
-    public void sTurn(ActionEvent event){
-
+    public void btnPC(ActionEvent event){
+        if(block1&&block2){
+            ((Node)event.getSource()).getScene().getWindow().hide();
+            if(player==1) player=2;
+            else if(player==2) player=1;
+            PC(event);
+            return;
+        }
+        if(i1!=0||i2!=0||i3!=0||i4!=0){
+            setError("Aby oddac ture najpierw postaw wszystkie dostepne statki na plansz\u0119");
+            return;
+        }
         ((Node)event.getSource()).getScene().getWindow().hide();
 
-        saveFile();
+        if(player==1) block1=true;
+        if(player==2) block2=true;
 
+        saver.setId(aId,player);
+        System.out.println("zapis dla"+player);
+        if(player==1) player=2;
+        else if(player==2) player=1;
+
+        PC(event);
+    }
+
+    private void PC(ActionEvent event){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("BTS.fxml"));
             Scene BTS_scene = new Scene(root);
@@ -482,66 +480,35 @@ public class Controller {
     }
 
     public void clickAW(MouseEvent mouseEvent) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GUI.fxml"));
+        Parent root = loader.load();
+
         Scene BTS_scene = new Scene(root);
         Stage window = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         window.setScene(BTS_scene);
-        window.show();
         root.requestFocus();
 
-        SavePlayer savePlayer = (SavePlayer) ResourceManager.load("player");
-        player = savePlayer.player;
-        System.out.println("player: "+player);
-        if(player==1) player=2;
-        else if(player==2) player=1;
+        Map<String, Object> namespace = loader.getNamespace();
+        GridPane gridPane = (GridPane) namespace.get("GP");
+        GridPane gridPaneD = (GridPane) namespace.get("GPd");
+        load(saver.getId(player),root);
+        if((player==1&& block1)||(player==2&& block2)){
+            gridPane.setDisable(true);
+            gridPaneD.setDisable(false);
+        }
+        System.out.println("wczytanie dla"+player);
 
-        loadFile(root);
+        window.show();
     }
 
-    public void save(String sId){
-        aId[wSs] = sId;
-        String id = aId[wSs];
-        //System.out.println(id);
-        wSs++;
-    }
-
-    public void saveFile(){
-        data.sId = aId;
-        savePlayer.player = player;
-        try {
-            if(player==1){
-                ResourceManager.save(data,"1.save");
-            }else if(player==2){
-                ResourceManager.save(data,"2.save");
-            }
-            ResourceManager.save(savePlayer,"player");
-        } catch (Exception e) {
-            System.out.println("Couldn't save: " + e.getMessage());
-        }
-    }
-
-    public void loadFile(Parent root){
-        try {
-            if (player == 1) {
-                SaveData data = (SaveData) ResourceManager.load("1.save");
-                aId = data.sId;
-            } else if (player == 2) {
-                SaveData data = (SaveData) ResourceManager.load("2.save");
-                aId = data.sId;
-            }
-        }
-        catch (Exception e) {
-            System.out.println("Couldn't load save data: " + e.getMessage());
-        }
-        System.out.println("playerL: "+player);
+    private void load(String[] aId, Parent root){
         for(int i=0; i<=19; i++){
             String id = aId[i];
-            System.out.println("id: "+id);
+//            System.out.println("id: "+id);
             if(aId[i]!=null) {
                 JFXButton button = (JFXButton) root.lookup("#" + id);
                 button.setStyle("-fx-background-color: black");
             }
         }
     }
-
 }
