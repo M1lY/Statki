@@ -39,6 +39,7 @@ public class Controller {
     public Button m4;
     private int wS = 0;
     private String[] aId = new String[20];
+    private String[] sId = new String[20];
     private int wSs = 0;
     private static int player = 1;
     private Saver saver = new Saver();
@@ -302,8 +303,6 @@ public class Controller {
                     setBlack(event, id);
                     stopH++;
                     tab[wS] = String.valueOf(letter+""+stopH);
-                    System.out.println("do set "+letter);
-                    System.out.println("do set "+stopH);
                     wS++;
                 }
             }else{
@@ -313,8 +312,6 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     tab[wS] = String.valueOf(letter+""+number);
-                    System.out.println("do set "+letter);
-                    System.out.println("do set "+number);
                     number++;
                     wS++;
                 }
@@ -324,18 +321,10 @@ public class Controller {
 
     private void setError(String s){
         tError.setText(s);
-        tError.setOpacity(1);
-        FadeTransition ft = new FadeTransition(Duration.millis(3000), tError);
-        ft.setFromValue(1.0);
+        FadeTransition ft = new FadeTransition(Duration.millis(5000), tError);
+        ft.setFromValue(1);
         ft.setToValue(0);
-        new Thread(() -> {
-            try {
-                Thread.sleep(4000);
-                ft.play();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
+        ft.play();
     }
 
     private void setBlack(MouseEvent event, String id){
@@ -414,8 +403,6 @@ public class Controller {
             if(number > stopH){
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
-                    System.out.println("valid number>stopH letter:"+letter);
-                    System.out.println("valid number>stopH stopH:"+stopH);
                     if (valP(letter, stopH, list)){
                         return false;
                     }
@@ -424,8 +411,6 @@ public class Controller {
             }else{
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
-                    System.out.println("valid number<=stopH letter:"+letter);
-                    System.out.println("valid number<=stopH number:"+number);
                     if (valP(letter, number, list)){
                         return false;
                     }
@@ -437,26 +422,45 @@ public class Controller {
     }
 
     private boolean valP(int a, int b, List<String> list){
-        for (int p=0; p<19; p++){
-            if (list.contains(String.valueOf(a+""+b)) || list.contains(String.valueOf(a+""+(b+1))) || list.contains(String.valueOf(a+""+(b-1))) || list.contains(String.valueOf((a+1) +""+ b)) || list.contains(String.valueOf((a+1) +""+ (b+1))) || list.contains(String.valueOf((a+1) +""+ (b-1))) || list.contains(String.valueOf((a-1) +""+ b)) || list.contains(String.valueOf((a-1) +""+ (b+1))) || list.contains(String.valueOf((a-1) +""+ (b-1)))){
-                return true;
-            }
-        }
-        return false;
+        return list.contains(String.valueOf(a + "" + b)) || list.contains(String.valueOf(a + "" + (b + 1))) || list.contains(String.valueOf(a + "" + (b - 1))) || list.contains(String.valueOf((a + 1) + "" + b)) || list.contains(String.valueOf((a + 1) + "" + (b + 1))) || list.contains(String.valueOf((a + 1) + "" + (b - 1))) || list.contains(String.valueOf((a - 1) + "" + b)) || list.contains(String.valueOf((a - 1) + "" + (b + 1))) || list.contains(String.valueOf((a - 1) + "" + (b - 1)));
+    }
+
+    private boolean valS(char a, int b, List<String> list) {
+        return list.contains(String.valueOf(a + "" + (b + 1))) || list.contains(String.valueOf(a + "" + (b - 1))) || list.contains(String.valueOf((char) (a + 1) + "" + b)) || list.contains(String.valueOf((char) (a + 1) + "" + (b + 1))) || list.contains(String.valueOf((char) (a + 1) + "" + (b - 1))) || list.contains(String.valueOf((char) (a - 1) + "" + b)) || list.contains(String.valueOf((char) (a - 1) + "" + (b + 1))) || list.contains(String.valueOf((char) (a - 1) + "" + (b - 1)));
     }
 
     private void save(String sId){
         aId[wSs] = sId;
-        System.out.println(sId);
         wSs++;
+    }
+
+    public void btnShot(MouseEvent mouseEvent){
+        JFXButton btn = (JFXButton) mouseEvent.getSource();
+        String bId = btn.getId().replaceFirst("d","");
+        List<String> list;
+        if(player==1) list= saver.getIdList(2);
+        else list= saver.getIdList(1);
+        if(list.contains(bId)){
+            Node source = (Node) mouseEvent.getSource();
+            Window theStage = source.getScene().getWindow();
+            Scene root = theStage.getScene();
+            JFXButton button = (JFXButton) root.lookup("#d" + bId);
+            button.setStyle("-fx-background-color: red");
+            splitIdChar(bId);
+            if(valS(bId.charAt(0),number, list)) setError("Brawo! trafiles");
+            else setError("Brawo! trafiles i zatopiles");
+            if (player==1) saver.delIdList(bId,2);
+            else saver.delIdList(bId,1);
+        }
     }
 
     public void btnPC(ActionEvent event){
         if(block1&&block2){
             ((Node)event.getSource()).getScene().getWindow().hide();
+            saver.setIdS(sId,player);
             if(player==1) player=2;
             else if(player==2) player=1;
-            PC(event);
+            doPC(event);
             return;
         }
         if(i1!=0||i2!=0||i3!=0||i4!=0){
@@ -469,14 +473,13 @@ public class Controller {
         if(player==2) block2=true;
 
         saver.setId(aId,player);
-        System.out.println("zapis dla"+player);
         if(player==1) player=2;
         else if(player==2) player=1;
 
-        PC(event);
+        doPC(event);
     }
 
-    private void PC(ActionEvent event){
+    private void doPC(ActionEvent event){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("BTS.fxml"));
             Scene BTS_scene = new Scene(root);
@@ -502,11 +505,10 @@ public class Controller {
         GridPane gridPane = (GridPane) namespace.get("GP");
         GridPane gridPaneD = (GridPane) namespace.get("GPd");
         load(saver.getId(player),root);
-        if((player==1&& block1)||(player==2&& block2)){
+        if((player==1 && block1)||(player==2 && block2)){
             gridPane.setDisable(true);
             gridPaneD.setDisable(false);
         }
-        System.out.println("wczytanie dla"+player);
 
         window.show();
     }
@@ -514,7 +516,6 @@ public class Controller {
     private void load(String[] aId, Parent root){
         for(int i=0; i<=19; i++){
             String id = aId[i];
-//            System.out.println("id: "+id);
             if(aId[i]!=null) {
                 JFXButton button = (JFXButton) root.lookup("#" + id);
                 button.setStyle("-fx-background-color: black");
