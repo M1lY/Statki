@@ -4,8 +4,23 @@
  #gridStyleD > .label {
     -fx-alignment: center;
  }
- .bordery {
+ .x {
+    -fx-shape: "m -0.6935,0.67349916 1.387,-1.587 L 11.5,9.8004992 22.2145,-0.91350084 l 1.571,1.587 -10.6985,10.69899984 10.6985,10.714 -1.571,1.587 -10.7145,-10.714 -10.7065,10.714 -1.587,-1.587 10.7065,-10.714 z";
+    -fx-border-width: 0px;
+    -fx-background-color: red;
+ }
+ .borders {
     -fx-border-style: solid;
     -fx-border-width: 1px;
     -fx-border-color: #34495A;
+ }
+ .gridStyle Line {
+   -fx-stroke: #000000;
+ }
+ .gridStyleShadow Line {
+   -fx-stroke: #252525;
+ }
+ .circle {
+   -fx-shape: "M 256,0 C 114.837,0 0,114.837 0,256 0,397.163 114.837,512 256,512 397.163,512 512,397.163 512,256 512,114.837 397.163,0 256,0 Z";
+   -fx-background-color: black;
  }

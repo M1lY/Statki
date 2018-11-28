@@ -11,11 +11,14 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -39,12 +42,16 @@ public class Controller {
     public Button m4;
     private int wS = 0;
     private String[] aId = new String[20];
-    private String[] sId = new String[20];
+    private List<String> sId = new ArrayList<>();
     private int wSs = 0;
     private static int player = 1;
     private Saver saver = new Saver();
     private static boolean block1=false;
     private static boolean block2=false;
+    private List<String> temp = new ArrayList<>();
+    private List<String> temp2 = new ArrayList<>();
+    private boolean ifHaveMove = true;
+    private static Stage windowSave = new Stage();
 
     public void btnHover(MouseEvent mouseEvent){
         switch (iM){
@@ -225,7 +232,7 @@ public class Controller {
                 if(i1>0 && validator(event, 1, 10, 10)) {
                     doSet(event, 1, 10, 10);
                     i1--;
-                    m1.setText("Jendomasztowce (pozostało: " + i1 + ")");
+                    m1.setText("Jednomasztowce (pozostało: " + i1 + ")");
                 }else if(i1<=0){
                     setError("Nie masz już więcej statków");
                 }else{
@@ -280,7 +287,7 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     stopV++;
-                    tab[wS] = String.valueOf(stopV+""+number);
+                    tab[wS] = stopV + "" + number;
                     wS++;
                 }
             }else{
@@ -290,7 +297,7 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     letterM++;
-                    tab[wS] = String.valueOf(letterM+""+number);
+                    tab[wS] = letterM + "" + number;
                     wS++;
                 }
             }
@@ -302,7 +309,7 @@ public class Controller {
                     save(id);
                     setBlack(event, id);
                     stopH++;
-                    tab[wS] = String.valueOf(letter+""+stopH);
+                    tab[wS] = letter + "" + stopH;
                     wS++;
                 }
             }else{
@@ -311,7 +318,7 @@ public class Controller {
                     String id = let + number;
                     save(id);
                     setBlack(event, id);
-                    tab[wS] = String.valueOf(letter+""+number);
+                    tab[wS] = letter + "" + number;
                     number++;
                     wS++;
                 }
@@ -345,6 +352,10 @@ public class Controller {
             }
         }
         number = Integer.parseInt(Id.substring(1));
+    }
+
+    private int getNumber(String Id){
+        return Integer.parseInt(Id.substring(1));
     }
 
     public void mClick(ActionEvent event){
@@ -386,7 +397,7 @@ public class Controller {
                 for (int i = 0 ; i < x; i++){
                     List<String> list = Arrays.asList(tab);
                     stopV++;
-                    if (valP(stopV, number, list)){
+                    if (list.contains(stopV + "" + number) || valP(stopV, number, list)){
                         return false;
                     }
                 }
@@ -394,7 +405,7 @@ public class Controller {
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
                     letterM++;
-                    if (valP(letterM, number, list)){
+                    if (list.contains(letterM + "" + number) || valP(letterM, number, list)){
                         return false;
                     }
                 }
@@ -403,7 +414,7 @@ public class Controller {
             if(number > stopH){
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
-                    if (valP(letter, stopH, list)){
+                    if (list.contains(letter + "" + stopH) || valP(letter, stopH, list)){
                         return false;
                     }
                     stopH++;
@@ -411,7 +422,7 @@ public class Controller {
             }else{
                 for (int i = 0; i < x; i++){
                     List<String> list = Arrays.asList(tab);
-                    if (valP(letter, number, list)){
+                    if (list.contains(letter + "" + number) || valP(letter, number, list)){
                         return false;
                     }
                     number++;
@@ -422,11 +433,67 @@ public class Controller {
     }
 
     private boolean valP(int a, int b, List<String> list){
-        return list.contains(String.valueOf(a + "" + b)) || list.contains(String.valueOf(a + "" + (b + 1))) || list.contains(String.valueOf(a + "" + (b - 1))) || list.contains(String.valueOf((a + 1) + "" + b)) || list.contains(String.valueOf((a + 1) + "" + (b + 1))) || list.contains(String.valueOf((a + 1) + "" + (b - 1))) || list.contains(String.valueOf((a - 1) + "" + b)) || list.contains(String.valueOf((a - 1) + "" + (b + 1))) || list.contains(String.valueOf((a - 1) + "" + (b - 1)));
+        return list.contains(a + "" + (b + 1)) || list.contains(a + "" + (b - 1)) || list.contains((a + 1) + "" + b) || list.contains((a + 1) + "" + (b + 1)) || list.contains((a + 1) + "" + (b - 1)) || list.contains((a - 1) + "" + b) || list.contains((a - 1) + "" + (b + 1)) || list.contains((a - 1) + "" + (b - 1));
     }
 
-    private boolean valS(char a, int b, List<String> list) {
-        return list.contains(String.valueOf(a + "" + (b + 1))) || list.contains(String.valueOf(a + "" + (b - 1))) || list.contains(String.valueOf((char) (a + 1) + "" + b)) || list.contains(String.valueOf((char) (a + 1) + "" + (b + 1))) || list.contains(String.valueOf((char) (a + 1) + "" + (b - 1))) || list.contains(String.valueOf((char) (a - 1) + "" + b)) || list.contains(String.valueOf((char) (a - 1) + "" + (b + 1))) || list.contains(String.valueOf((char) (a - 1) + "" + (b - 1)));
+    private boolean valS(char a, int b, List<String> list, Scene root){
+        String[] tab = {a + "" + (b + 1), a + "" + (b - 1), (char) (a + 1) + "" + b, (char) (a + 1) + "" + (b + 1), (char) (a + 1) + "" + (b - 1), (char) (a - 1) + "" + b, (char) (a - 1) + "" + (b + 1), (char) (a - 1) + "" + (b - 1)};
+        for (String x : tab){
+            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            if (btn==null) continue;
+            if (list.contains(x)&&!btn.getStyleClass().contains("x")&&!temp2.contains(x)){
+                return true;
+            }
+        }
+        for (String x : tab){
+            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            if (btn==null) continue;
+            if (btn.getStyleClass().contains("x")&&!temp2.contains(x)){
+                temp2.add(x);
+                if(valS(x.charAt(0), getNumber(x), list, root)) return true;
+            }
+        }
+        return false;
+    }
+
+    private void setCircle(char a, int b, MouseEvent mouseEvent){
+        String[] tab = {a + "" + (b + 1), a + "" + (b - 1), (char) (a + 1) + "" + b, (char) (a + 1) + "" + (b + 1), (char) (a + 1) + "" + (b - 1), (char) (a - 1) + "" + b, (char) (a - 1) + "" + (b + 1), (char) (a - 1) + "" + (b - 1)};
+        Node source = (Node) mouseEvent.getSource();
+        Window theStage = source.getScene().getWindow();
+        Scene root = theStage.getScene();
+        int p;
+        if(player==1) p=2;
+        else p=1;
+        temp.add(String.valueOf(a+b));
+        for (String x : tab){
+            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            if (btn==null) continue;
+            if (!btn.getStyleClass().contains("x")&&!btn.getStyleClass().contains("circle")&&!saver.getIdList(p).contains(x)){
+                btn.getStyleClass().add("circle");
+                btn.setScaleX(0.369565217);
+                btn.setScaleY(0.5);
+                saver.addToCircleList(x, player);
+            }
+        }
+        for (String x : tab){
+            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            if (btn==null) continue;
+            if (btn.getStyleClass().contains("x")&&!temp.contains(x)){
+                splitIdChar(x);
+                temp.add(x);
+                setCircle(x.charAt(0), number, mouseEvent);
+            }
+        }
+    }
+
+    private void loadCircle(List<String> circles, Map<String, Object> namespace){
+        for (String x : circles){
+            JFXButton button = (JFXButton) namespace.get("d" + x);
+            if(button==null) continue;
+            button.getStyleClass().add("circle");
+            button.setScaleX(0.369565217);
+            button.setScaleY(0.5);
+        }
     }
 
     private void save(String sId){
@@ -434,30 +501,71 @@ public class Controller {
         wSs++;
     }
 
+    private boolean ifAllShotDown(Scene root){
+        int p;
+        if (player==1) p=2;
+        else p=1;
+        for (String x : saver.getIdList(p)){
+            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            if(!btn.getStyleClass().contains("x")) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void btnShot(MouseEvent mouseEvent){
+        Node source = (Node) mouseEvent.getSource();
+        Window theStage = source.getScene().getWindow();
+        Scene root = theStage.getScene();
+        if(!ifHaveMove) {
+            setError("Nie masz juz ruchow teraz kliknij przycisk \"oddaj ture przeciwnikowi\"");
+            return;
+        }
         JFXButton btn = (JFXButton) mouseEvent.getSource();
         String bId = btn.getId().replaceFirst("d","");
+        JFXButton button = (JFXButton) root.lookup("#d" + bId);
         List<String> list;
-        if(player==1) list= saver.getIdList(2);
-        else list= saver.getIdList(1);
+        if(player==1) list = saver.getIdList(2);
+        else list = saver.getIdList(1);
         if(list.contains(bId)){
-            Node source = (Node) mouseEvent.getSource();
-            Window theStage = source.getScene().getWindow();
-            Scene root = theStage.getScene();
-            JFXButton button = (JFXButton) root.lookup("#d" + bId);
-            button.setStyle("-fx-background-color: red");
+            button.getStyleClass().add("x");
             splitIdChar(bId);
-            if(valS(bId.charAt(0),number, list)) setError("Brawo! trafiles");
-            else setError("Brawo! trafiles i zatopiles");
-            if (player==1) saver.delIdList(bId,2);
-            else saver.delIdList(bId,1);
+            if(valS(bId.charAt(0), number, list, root)) setError("Trafiony! mozesz jeszcze raz oddac strzal");
+            else{
+                setError("Trafiony i zatopiony! mozesz jeszcze raz oddac strzal");
+                setCircle(bId.charAt(0), number, mouseEvent);
+            }
+            sId.add(bId);
+        }else if(!btn.getStyleClass().contains("x")&&!btn.getStyleClass().contains("circle")){
+            ifHaveMove=false;
+            btn.getStyleClass().add("circle");
+            btn.setScaleX(0.369565217);
+            btn.setScaleY(0.5);
+            setError("Pudlo");
+            saver.addToCircleList(bId, player);
+        }else setError("W to miejece nie mozesz oddac strzalu");
+        if(ifAllShotDown(root)){
+            windowSave = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+            Stage window = new Stage();
+            window.initModality(Modality.APPLICATION_MODAL);
+            window.setTitle("Wygrales");
+            try {
+                Parent winRoot = FXMLLoader.load(getClass().getResource("WIN.fxml"));
+                window.setScene(new Scene(winRoot, 300, 100));
+                window.setResizable(false);
+                Toolkit.getDefaultToolkit().beep();
+                window.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public void btnPC(ActionEvent event){
         if(block1&&block2){
             ((Node)event.getSource()).getScene().getWindow().hide();
-            saver.setIdS(sId,player);
+            saver.addToIdS(sId, player);
             if(player==1) player=2;
             else if(player==2) player=1;
             doPC(event);
@@ -467,7 +575,6 @@ public class Controller {
             setError("Aby oddac ture najpierw postaw wszystkie dostepne statki na plansz\u0119");
             return;
         }
-        ((Node)event.getSource()).getScene().getWindow().hide();
 
         if(player==1) block1=true;
         if(player==2) block2=true;
@@ -485,8 +592,8 @@ public class Controller {
             Scene BTS_scene = new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(BTS_scene);
-            window.show();
             root.requestFocus();
+            window.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -506,14 +613,21 @@ public class Controller {
         GridPane gridPaneD = (GridPane) namespace.get("GPd");
         load(saver.getId(player),root);
         if((player==1 && block1)||(player==2 && block2)){
+            if (player==1) {
+                loadS(saver.getIdS(1),root);
+                loadCircle(saver.getCircleList(1), namespace);
+            } else {
+                loadS(saver.getIdS(2),root);
+                loadCircle(saver.getCircleList(2), namespace);
+            }
             gridPane.setDisable(true);
             gridPaneD.setDisable(false);
         }
-
         window.show();
     }
 
     private void load(String[] aId, Parent root){
+        if(aId==null) return;
         for(int i=0; i<=19; i++){
             String id = aId[i];
             if(aId[i]!=null) {
@@ -521,5 +635,65 @@ public class Controller {
                 button.setStyle("-fx-background-color: black");
             }
         }
+    }
+
+    private void loadS(List<String> aId, Parent root){
+        if(aId.isEmpty()) return;
+        for (String id : aId) {
+            if (id != null) {
+                JFXButton button = (JFXButton) root.lookup("#d" + id);
+                button.getStyleClass().add("x");
+            }
+        }
+    }
+
+    public void btnEndGame(){
+        System.exit(0);
+    }
+
+    public void btnSeeEnemyShips() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GUI.fxml"));
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root);
+        windowSave.setScene(scene);
+        root.requestFocus();
+
+        Map<String, Object> namespace = loader.getNamespace();
+        GridPane gridPane = (GridPane) namespace.get("GP");
+        GridPane gridPaneD = (GridPane) namespace.get("GPd");
+        load(saver.getId(player==1?2:1),root);
+        if((player==1 && block1)||(player==2 && block2)){
+            if (player==1) {
+                loadS(saver.getIdS(2),root);
+                loadCircle(saver.getCircleList(2), namespace);
+            } else {
+                loadS(saver.getIdS(1),root);
+                loadCircle(saver.getCircleList(1), namespace);
+            }
+            gridPane.setDisable(true);
+            gridPaneD.setDisable(true);
+        }
+        windowSave.show();
+    }
+
+    public void btnNewGame(ActionEvent event) throws IOException {
+        saver.clear();
+        player = 1;
+        block1 = false;
+        block2 = false;
+
+        windowSave.close();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GUI.fxml"));
+        Parent root = loader.load();
+
+        Scene scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        root.requestFocus();
+        Map<String, Object> namespace = loader.getNamespace();
+        GridPane gridPaneD = (GridPane) namespace.get("GPd");
+        gridPaneD.setDisable(true);
+        window.show();
     }
 }
