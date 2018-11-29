@@ -1,13 +1,14 @@
 package Statki;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class Saver {
     private static String[] id1 = new String[20];               //do zapisu ustawienia statków
     private static String[] id2 = new String[20];               //do zapisu ustawienia statków
-    private static List<String> idList1 = new ArrayList<>();    //do zapisu statków pozosta³ych do zestrzelania
-    private static List<String> idList2 = new ArrayList<>();    //do zapisu statków pozosta³ych do zestrzelania
+    private static List<String> idList1 = new ArrayList<>();    //do zapisu ustawienia statków (lista)
+    private static List<String> idList2 = new ArrayList<>();    //do zapisu ustawienia statków (lista)
     private static List<String> idListS1 = new ArrayList<>();   //do zapisu strza³ów
     private static List<String> idListS2 = new ArrayList<>();   //do zapisu strza³ów
     private static List<String> circle1 = new ArrayList<>();    //do zapisu nie trafionych strza³ów
@@ -44,11 +45,11 @@ class Saver {
 
     void setId(String[] id, int p) {
         if(p==1){
-            this.id1 = id;
-            for (String s : id) this.idList1.add(s);
+            id1 = id;
+            Collections.addAll(idList1, id);
         }else{
-            this.id2 = id;
-            for (String s : id) this.idList2.add(s);
+            id2 = id;
+            Collections.addAll(idList2, id);
         }
     }
 
