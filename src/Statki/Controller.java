@@ -723,6 +723,9 @@ public class Controller {
         Map<String, Object> namespace = loader.getNamespace();
         GridPane gridPaneD = (GridPane) namespace.get("GPd");
         gridPaneD.setDisable(true);
+        Dimension d= Toolkit.getDefaultToolkit().getScreenSize();
+        window.setX((d.width >> 1) -(window.getWidth()/2));
+        window.setY((d.height >> 1) -(window.getHeight()/2));
         window.show();
     }
 }
