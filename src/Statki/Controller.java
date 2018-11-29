@@ -59,26 +59,36 @@ public class Controller {
                 if(i1 > 0){
                     doHover(mouseEvent, 1, 10, 10);
                 }else if (i1 == 0){
-                    iM = 2;
+                    if(i2!=0)iM = 2;
+                    else if(i3!=0) iM = 3;
+                    else if(i4!=0) iM = 4;
                 }
                 break;
             case 2:
                 if(i2 > 0){
                     doHover(mouseEvent, 2, 8, 9);
                 }else if (i2 == 0){
-                    iM = 3;
+                    if(i1!=0)iM = 1;
+                    else if(i3!=0) iM = 3;
+                    else if(i4!=0) iM = 4;
                 }
                 break;
             case 3:
                 if(i3 > 0){
                     doHover(mouseEvent, 3, 7, 8);
                 }else if (i3 == 0){
-                    iM = 4;
+                    if(i1!=0)iM = 1;
+                    else if(i2!=0) iM = 2;
+                    else if(i4!=0) iM = 4;
                 }
                 break;
             case 4:
                 if(i4 > 0){
                     doHover(mouseEvent, 4, 6, 7);
+                }else if (i4 == 0){
+                    if(i1!=0)iM = 0;
+                    else if(i2!=0) iM = 2;
+                    else if(i3!=0) iM = 3;
                 }
                 break;
         }
@@ -232,44 +242,44 @@ public class Controller {
                 if(i1>0 && validator(event, 1, 10, 10)) {
                     doSet(event, 1, 10, 10);
                     i1--;
-                    m1.setText("Jednomasztowce (pozostało: " + i1 + ")");
+                    m1.setText("Jednomasztowce (pozosta\u0142o: " + i1 + ")");
                 }else if(i1<=0){
-                    setError("Nie masz już więcej statków");
+                    setError("Nie masz ju\u017C więcej statk\u00F3w");
                 }else{
-                    setError("W tym miejscu nie możesz ustawić statku");
+                    setError("W tym miejscu nie mo\u017Cesz ustawi\u0107 statku");
                 }
                 break;
             case 2:
                 if(i2>0 && validator(event, 2, 8, 9)){
                     doSet(event, 2, 8, 9);
                     i2--;
-                    m2.setText("Dwumasztowce (pozostało: " + i2 + ")");
+                    m2.setText("Dwumasztowce (pozosta\u0142o: " + i2 + ")");
                 }else if(i2<=0){
-                    setError("Nie masz już więcej statków");
+                    setError("Nie masz ju\u017C więcej statk\u00F3w");
                 }else{
-                    setError("W tym miejscu nie możesz ustawić statku");
+                    setError("W tym miejscu nie mo\u017Cesz ustawi\u0107 statku");
                 }
                 break;
             case 3:
                 if(i3>0 && validator(event, 3, 7, 8)) {
                     doSet(event, 3, 7, 8);
                     i3--;
-                    m3.setText("Trzymasztowce (pozostało: " + i3 + ")");
+                    m3.setText("Trzymasztowce (pozosta\u0142o: " + i3 + ")");
                 }else if(i3<=0){
-                    setError("Nie masz już więcej statków");
+                    setError("Nie masz ju\u017C więcej statk\u00F3w");
                 }else{
-                    setError("W tym miejscu nie możesz ustawić statku");
+                    setError("W tym miejscu nie mo\u017Cesz ustawi\u0107 statku");
                 }
                 break;
             case 4:
                 if(i4>0 && validator(event, 4, 6, 7)) {
                     doSet(event, 4, 6, 7);
                     i4--;
-                    m4.setText("Czteromasztowce (pozostało: " + i4 + ")");
+                    m4.setText("Czteromasztowce (pozosta\u0142o: " + i4 + ")");
                 }else if(i4<=0){
-                    setError("Nie masz już więcej statków");
+                    setError("Nie masz ju\u017C więcej statk\u00F3w");
                 }else{
-                    setError("W tym miejscu nie możesz ustawić statku");
+                    setError("W tym miejscu nie mo\u017Cesz ustawi\u0107 statku");
                 }
                 break;
         }
@@ -362,16 +372,20 @@ public class Controller {
         Button btn = (Button) event.getSource();
         switch (btn.getId()){
             case "m1":
-                iM = 1;
+                if(i1!=0) iM = 1;
+                else setError("Nie masz ju\u017C statk\u00F3w tego rodzaju");
                 break;
             case "m2":
-                iM = 2;
+                if(i2!=0) iM = 2;
+                else setError("Nie masz ju\u017C statk\u00F3w tego rodzaju");
                 break;
             case "m3":
-                iM = 3;
+                if(i3!=0) iM = 3;
+                else setError("Nie masz ju\u017C statk\u00F3w tego rodzaju");
                 break;
             case "m4":
-                iM = 4;
+                if(i4!=0) iM = 4;
+                else setError("Nie masz ju\u017C statk\u00F3w tego rodzaju");
                 break;
         }
     }
@@ -519,7 +533,7 @@ public class Controller {
         Window theStage = source.getScene().getWindow();
         Scene root = theStage.getScene();
         if(!ifHaveMove) {
-            setError("Nie masz juz ruchow teraz kliknij przycisk \"oddaj ture przeciwnikowi\"");
+            setError("Nie masz ju\u017C ruch\u00F3w teraz kliknij przycisk \"oddaj tur\u0119 przeciwnikowi\"");
             return;
         }
         JFXButton btn = (JFXButton) mouseEvent.getSource();
@@ -531,9 +545,9 @@ public class Controller {
         if(list.contains(bId)){
             button.getStyleClass().add("x");
             splitIdChar(bId);
-            if(valS(bId.charAt(0), number, list, root)) setError("Trafiony! mozesz jeszcze raz oddac strzal");
+            if(valS(bId.charAt(0), number, list, root)) setError("Trafiony! mo\u017Cesz jeszcze raz odda\u0107 strza\u0142");
             else{
-                setError("Trafiony i zatopiony! mozesz jeszcze raz oddac strzal");
+                setError("Trafiony i zatopiony! mo\u017Cesz jeszcze raz odda\u0107 strza\u0142");
                 setCircle(bId.charAt(0), number, mouseEvent);
             }
             sId.add(bId);
@@ -542,14 +556,15 @@ public class Controller {
             btn.getStyleClass().add("circle");
             btn.setScaleX(0.369565217);
             btn.setScaleY(0.5);
-            setError("Pudlo");
+            setError("Pud\u0142o");
             saver.addToCircleList(bId, player);
-        }else setError("W to miejece nie mozesz oddac strzalu");
+        }else setError("W to miejsce nie mo\u017Cesz odda\u0107 strza\u0142u");
         if(ifAllShotDown(root)){
             windowSave = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
             Stage window = new Stage();
             window.initModality(Modality.APPLICATION_MODAL);
-            window.setTitle("Wygrales");
+//            window.setTitle("Wygra\u0142e\u015B");
+            window.setTitle("Wygrałeś");
             try {
                 Parent winRoot = FXMLLoader.load(getClass().getResource("WIN.fxml"));
                 window.setScene(new Scene(winRoot, 300, 100));
@@ -572,7 +587,7 @@ public class Controller {
             return;
         }
         if(i1!=0||i2!=0||i3!=0||i4!=0){
-            setError("Aby oddac ture najpierw postaw wszystkie dostepne statki na plansz\u0119");
+            setError("Aby odda\u0107 tur\u0119 najpierw postaw wszystkie dost\u0119pne statki na plansz\u0119");
             return;
         }
 
