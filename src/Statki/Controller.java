@@ -1,6 +1,5 @@
 package Statki;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -97,7 +96,7 @@ public class Controller {
     }
 
     private void doHover(MouseEvent mouseEvent, int x, int stopV, int stopH) {
-        JFXButton btn = (JFXButton) mouseEvent.getSource();
+        Button btn = (Button) mouseEvent.getSource();
         splitIdChar(btn.getId());
         if (direction == 'V') {
             if (letterM > stopV) {
@@ -107,7 +106,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: grey");
                     }
@@ -120,7 +119,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: grey");
                     }
@@ -135,7 +134,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: grey");
                     }
@@ -148,7 +147,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: grey");
                     }
@@ -176,7 +175,7 @@ public class Controller {
     }
 
     private void doExit(MouseEvent mouseEvent, int x, int stopV, int stopH) {
-        JFXButton btn = (JFXButton) mouseEvent.getSource();
+        Button btn = (Button) mouseEvent.getSource();
         splitIdChar(btn.getId());
         if (direction == 'V') {
             if (letterM > stopV) {
@@ -186,7 +185,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: #497496");
                     }
@@ -200,7 +199,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: #497496");
                     }
@@ -215,7 +214,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: #497496");
                     }
@@ -228,7 +227,7 @@ public class Controller {
                     Node source = (Node) mouseEvent.getSource();
                     Window theStage = source.getScene().getWindow();
                     Scene root = theStage.getScene();
-                    JFXButton button = (JFXButton) root.lookup("#" + id);
+                    Button button = (Button) root.lookup("#" + id);
                     if (!button.getStyle().equals("-fx-background-color: black")) {
                         button.setStyle("-fx-background-color: #497496");
                     }
@@ -288,7 +287,7 @@ public class Controller {
     }
 
     private void doSet(MouseEvent event, int x, int stopV, int stopH) {
-        JFXButton btn = (JFXButton) event.getSource();
+        Button btn = (Button) event.getSource();
         String bId = btn.getId();
         splitIdChar(bId);
         if (direction == 'V') {
@@ -350,7 +349,7 @@ public class Controller {
         Node source = (Node) event.getSource();
         Window theStage = source.getScene().getWindow();
         Scene root = theStage.getScene();
-        JFXButton button = (JFXButton) root.lookup("#" + id);
+        Button button = (Button) root.lookup("#" + id);
         button.setStyle("-fx-background-color: black");
     }
 
@@ -405,7 +404,7 @@ public class Controller {
     }
 
     private boolean validator(MouseEvent event, int x, int stopV, int stopH) {
-        JFXButton btn = (JFXButton) event.getSource();
+        Button btn = (Button) event.getSource();
         String bId = btn.getId();
         splitIdChar(bId);
         if (direction == 'V') {
@@ -455,14 +454,14 @@ public class Controller {
     private boolean valS(char a, int b, List<String> list, Scene root) {
         String[] tab = {a + "" + (b + 1), a + "" + (b - 1), (char) (a + 1) + "" + b, (char) (a + 1) + "" + (b + 1), (char) (a + 1) + "" + (b - 1), (char) (a - 1) + "" + b, (char) (a - 1) + "" + (b + 1), (char) (a - 1) + "" + (b - 1)};
         for (String x : tab) {
-            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            Button btn = (Button) root.lookup("#d" + x);
             if (btn == null) continue;
             if (list.contains(x) && !btn.getStyleClass().contains("x") && !temp2.contains(x)) {
                 return true;
             }
         }
         for (String x : tab) {
-            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            Button btn = (Button) root.lookup("#d" + x);
             if (btn == null) continue;
             if (btn.getStyleClass().contains("x") && !temp2.contains(x)) {
                 temp2.add(x);
@@ -482,9 +481,10 @@ public class Controller {
         else p = 1;
         temp.add(String.valueOf(a + b));
         for (String x : tab) {
-            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            Button btn = (Button) root.lookup("#d" + x);
             if (btn == null) continue;
             if (!btn.getStyleClass().contains("x") && !btn.getStyleClass().contains("circle") && !saver.getIdList(p).contains(x)) {
+                btn.setStyle("");
                 btn.getStyleClass().add("circle");
                 btn.setScaleX(0.369565217);
                 btn.setScaleY(0.5);
@@ -492,7 +492,7 @@ public class Controller {
             }
         }
         for (String x : tab) {
-            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            Button btn = (Button) root.lookup("#d" + x);
             if (btn == null) continue;
             if (btn.getStyleClass().contains("x") && !temp.contains(x)) {
                 splitIdChar(x);
@@ -504,8 +504,9 @@ public class Controller {
 
     private void loadCircle(List<String> circles, Map<String, Object> namespace) {
         for (String x : circles) {
-            JFXButton button = (JFXButton) namespace.get("d" + x);
+            Button button = (Button) namespace.get("d" + x);
             if (button == null) continue;
+            button.setStyle("");
             button.getStyleClass().add("circle");
             button.setScaleX(0.369565217);
             button.setScaleY(0.5);
@@ -522,7 +523,7 @@ public class Controller {
         if (player == 1) p = 2;
         else p = 1;
         for (String x : saver.getIdList(p)) {
-            JFXButton btn = (JFXButton) root.lookup("#d" + x);
+            Button btn = (Button) root.lookup("#d" + x);
             if (!btn.getStyleClass().contains("x")) {
                 return false;
             }
@@ -538,13 +539,14 @@ public class Controller {
             setError("Nie masz ju\u017C ruch\u00F3w teraz kliknij przycisk \"oddaj tur\u0119 przeciwnikowi\"");
             return;
         }
-        JFXButton btn = (JFXButton) mouseEvent.getSource();
+        Button btn = (Button) mouseEvent.getSource();
         String bId = btn.getId().replaceFirst("d", "");
-        JFXButton button = (JFXButton) root.lookup("#d" + bId);
+        Button button = (Button) root.lookup("#d" + bId);
         List<String> list;
         if (player == 1) list = saver.getIdList(2);
         else list = saver.getIdList(1);
         if (list.contains(bId)) {
+            button.setStyle("");
             button.getStyleClass().add("x");
             splitIdChar(bId);
             if (valS(bId.charAt(0), number, list, root))
@@ -556,6 +558,7 @@ public class Controller {
             sId.add(bId);
         } else if (!btn.getStyleClass().contains("x") && !btn.getStyleClass().contains("circle")) {
             ifHaveMove = false;
+            btn.setStyle("");
             btn.getStyleClass().add("circle");
             btn.setScaleX(0.369565217);
             btn.setScaleY(0.5);
@@ -655,7 +658,7 @@ public class Controller {
         for (int i = 0; i <= 19; i++) {
             String id = aId[i];
             if (aId[i] != null) {
-                JFXButton button = (JFXButton) root.lookup("#" + id);
+                Button button = (Button) root.lookup("#" + id);
                 button.setStyle("-fx-background-color: black");
             }
         }
@@ -665,7 +668,8 @@ public class Controller {
         if (aId.isEmpty()) return;
         for (String id : aId) {
             if (id != null) {
-                JFXButton button = (JFXButton) root.lookup("#d" + id);
+                Button button = (Button) root.lookup("#d" + id);
+                button.setStyle("");
                 button.getStyleClass().add("x");
             }
         }
