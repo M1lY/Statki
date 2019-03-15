@@ -638,10 +638,12 @@ public class Controller {
         load(saver.getId(player), root);
         if ((player == 1 && block1) || (player == 2 && block2)) {
             if (player == 1) {
-                loadS(saver.getIdS(1), root);
+                loadSD(saver.getIdS(1), root);
+                loadS(saver.getIdS(2), root);
                 loadCircle(saver.getCircleList(1), namespace);
             } else {
-                loadS(saver.getIdS(2), root);
+                loadSD(saver.getIdS(2), root);
+                loadS(saver.getIdS(1), root);
                 loadCircle(saver.getCircleList(2), namespace);
             }
             gridPane.setDisable(true);
@@ -664,11 +666,26 @@ public class Controller {
         }
     }
 
+    private void loadSD(List<String> aId, Parent root) {
+        if (aId.isEmpty()) return;
+        for (String id : aId) {
+            if (id != null) {
+                Button buttonD = (Button) root.lookup("#d" + id);
+                buttonD.setStyle("");
+                buttonD.getStyleClass().add("x");
+
+                Button button = (Button) root.lookup("#" + id);
+                button.setStyle("");
+                button.getStyleClass().add("x");
+            }
+        }
+    }
+
     private void loadS(List<String> aId, Parent root) {
         if (aId.isEmpty()) return;
         for (String id : aId) {
             if (id != null) {
-                Button button = (Button) root.lookup("#d" + id);
+                Button button = (Button) root.lookup("#" + id);
                 button.setStyle("");
                 button.getStyleClass().add("x");
             }
