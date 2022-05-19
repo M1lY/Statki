@@ -641,10 +641,12 @@ public class Controller {
                 loadSD(saver.getIdS(1), root);
                 loadS(saver.getIdS(2), root);
                 loadCircle(saver.getCircleList(1), namespace);
+                loadEnemyCircle(saver.getCircleList(2), root);
             } else {
                 loadSD(saver.getIdS(2), root);
                 loadS(saver.getIdS(1), root);
                 loadCircle(saver.getCircleList(2), namespace);
+                loadEnemyCircle(saver.getCircleList(1), root);
             }
             gridPane.setDisable(true);
             gridPaneD.setDisable(false);
@@ -653,6 +655,17 @@ public class Controller {
             gridPaneD.setDisable(true);
         }
         window.show();
+    }
+
+    private void loadEnemyCircle(List<String> circles, Parent root) {
+        for (String x : circles) {
+            Button button = (Button) root.lookup("#" + x);
+            if (button == null) continue;
+            button.setStyle("");
+            button.getStyleClass().add("circle");
+            button.setScaleX(0.369565217);
+            button.setScaleY(0.5);
+        }
     }
 
     private void load(String[] aId, Parent root) {
@@ -673,10 +686,6 @@ public class Controller {
                 Button buttonD = (Button) root.lookup("#d" + id);
                 buttonD.setStyle("");
                 buttonD.getStyleClass().add("x");
-
-                Button button = (Button) root.lookup("#" + id);
-                button.setStyle("");
-                button.getStyleClass().add("x");
             }
         }
     }
